@@ -1,14 +1,19 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
+import { Link } from "react-router-dom";
 
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
-
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { BodyButters } from "./component/bodyButters";
+import { BodyWash } from "./component/bodyWash";
+import { PerfumeOils } from "./component/perfumeOils";
+import { SoapScrubs } from "./component/soapScrubs";
+import { Cart } from "./component/cart";
 
 //create your first component
 export const Layout = () => {
@@ -20,11 +25,17 @@ export const Layout = () => {
 		<div className="d-flex flex-column h-100">
 			<BrowserRouter>
 				<ScrollToTop>
+					<div className="container">
+						<h1 className="fisteac">Bare Min</h1>
+					</div>
 					<Navbar />
 					<Switch>
 						<Route exact path="/" component={Home} />
-						<Route path="/demo" component={Demo} />
-						<Route path="/single/:theid" component={Single} />
+						<Route path="/bodyButters" component={BodyButters} />
+						<Route path="/bodyWash" component={BodyWash} />
+						<Route path="/perfumeOils" component={PerfumeOils} />
+						<Route path="/soapScrubs" component={SoapScrubs} />
+						<Route path="/cart" component={Cart} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footer />
