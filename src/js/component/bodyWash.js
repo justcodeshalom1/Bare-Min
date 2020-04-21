@@ -9,11 +9,7 @@ export class BodyWash extends React.Component {
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
-					return (
-						<React.Fragment>
-							<div>body wash page</div>
-						</React.Fragment>
-					);
+					return <React.Fragment></React.Fragment>;
 				}}
 			</Context.Consumer>
 		);
