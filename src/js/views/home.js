@@ -15,7 +15,6 @@ export class Home extends React.Component {
 						<div key={index}>
 							<p className="card-text bg-success">{item.name}</p>
 						</div>;
-						console.log("it worked");
 					});
 				}}
 			</Context.Consumer>
