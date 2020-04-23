@@ -31,15 +31,11 @@ const injectContext = PassedComponent => {
 			 * state.actions.loadSomeData(); <---- calling this function from the flux.js actions
 			 *
 			 **/
-			fetch("https://3000-ea7fbada-80c0-445f-b440-e201d48b02f6.ws-us02.gitpod.io/product")
-				.then(resp => resp.json())
-				.then(data => {
-					// console.log(data);
-					// let store = this.state.store;
-					state.actions.loadSomeData();
-				})
-				.catch(error => {});
-		}, []); // The initial value for the context is not null anymore, but the current state of this component, // the context will now have a getStore, getActions and setStore functions available, because they were declared // on the state of this component
+
+			state.actions.loadSomeData();
+		}, []);
+
+		// The initial value for the context is not null anymore, but the current state of this component, // the context will now have a getStore, getActions and setStore functions available, because they were declared // on the state of this component
 		return (
 			<Context.Provider value={state}>
 				                                                 

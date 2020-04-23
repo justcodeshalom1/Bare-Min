@@ -13,7 +13,7 @@ export class Home extends React.Component {
 					return store.product.map((item, index) => {
 						return;
 						<div key={index}>
-							<p className="card-text">{item.name}</p>
+							<p className="card-text bg-success">{item.name}</p>
 						</div>;
 						console.log("it worked");
 					});
