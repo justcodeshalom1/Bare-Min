@@ -19,7 +19,7 @@ const getState = ({ getStore, setStore }) => {
 					.then(resp => resp.json())
 					.then(data => {
 						const store = getStore();
-						setStore({ store: product });
+						data => setStore({ store: product });
 						console.log(data);
 					});
 			}
