@@ -7,7 +7,7 @@ import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
-import { Navbar } from "./component/navbar";
+import Navbar from "./component/navbar";
 import { Footer } from "./component/footer";
 import { BodyButters } from "./component/bodyButters";
 import { BodyWash } from "./component/bodyWash";

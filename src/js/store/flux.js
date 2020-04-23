@@ -18,8 +18,7 @@ const getState = ({ getStore, setStore }) => {
 				fetch("https://3000-ea7fbada-80c0-445f-b440-e201d48b02f6.ws-us02.gitpod.io/product")
 					.then(resp => resp.json())
 					.then(data => {
-						const { store, actions } = getStore();
-						data => setStore({ store: { ...store, product: data }, actions });
+						setStore({ product: data });
 						// console.log(data);
 					});
 			}
