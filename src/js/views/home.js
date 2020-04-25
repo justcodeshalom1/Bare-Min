@@ -8,9 +8,18 @@ import "../../styles/home.scss";
 export const Home = props => {
 	const { store, actions } = useContext(Context);
 	return (
-		<div className="jumbotron">
+		<div className="container">
 			{store.product.map((item, index) => {
-				return <div key={index}>{item.name}</div>;
+				return (
+					<>
+						<div key={index} className="card mt-5">
+							{item.name}, {item.price}
+						</div>
+						<button type="button btn-primary" onClick={() => actions.addToCart(index, item)}>
+							add to cart
+						</button>
+					</>
+				);
 			})}
 		</div>
 	);
