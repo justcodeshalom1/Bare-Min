@@ -7,6 +7,7 @@ import "../../styles/home.scss";
 
 export const Home = props => {
 	const { store, actions } = useContext(Context);
+
 	return (
 		<div className="container">
 			{store.product.map((item, index) => {

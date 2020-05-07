@@ -43,16 +43,15 @@ export default function Navbar(props) {
 							</li>
 						</ul>
 					</div>
-					<input
+					{/* <input
 						classNmae="form-control mr-sm-2"
-						type="search"
-						placeholder={search}
-						aria-label="Search"
+						type="text"
+						placeholder="Search Bare Min"
 						onChange={handleSearchChange}
 					/>
 					<button className="btn btn-outline-success my-2 my-sm-0" type="submit">
 						Search
-					</button>
+					</button> */}
 					<div className="nav-item mb-2">
 						<Context.Consumer>
 							{({ store }) => {
